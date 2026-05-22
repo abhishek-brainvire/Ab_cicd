@@ -2,8 +2,6 @@ name: Shopify Theme CI/CD
 
 on:
   push:
-    branches:
-      - main
 
 jobs:
   deploy:
@@ -26,7 +24,7 @@ jobs:
 
       - name: Deploy Theme
         env:
-          SHOPIFY_FLAG_STORE: your-store.myshopify.com
+          SHOPIFY_FLAG_STORE: abhishek-bv-2.myshopify.com
           SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.SHOPIFY_THEME_TOKEN }}
         run: |
           shopify theme push --unpublished
